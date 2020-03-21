@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class App {
 
     private static Scanner sc = new Scanner(System.in);
@@ -13,7 +12,6 @@ public class App {
 
     public static void main(String[] args) {
 
-        int i = 0;
         String option;
 
         do {
