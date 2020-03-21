@@ -38,6 +38,7 @@ public class App {
         } while (!option.equals("0"));
     }
 
+//teste
     private static void inserirAluno() {
         System.out.println("Insira o nome: ");
         String nome = sc.nextLine();
