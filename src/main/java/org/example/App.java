@@ -49,18 +49,18 @@ public class App {
     }
 
     private static boolean verificaNomeExistente(String nome){
-        for (Aluno aluno : listaAlunos){
+        alunos.forEach(aluno ->{
             if (aluno.getNome().equals(nome)){
                 return false;
             }
-        }
+        });
         return true;
     }
 
     private static void exibirLista() {
         System.out.println("----- Lista de nomes -----");
-        for (Aluno aluno : listaAlunos){
+        alunos.forEach(aluno ->{
             System.out.println(aluno.getNome());
-        }
+        });
     }
 }
