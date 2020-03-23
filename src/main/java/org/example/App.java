@@ -5,16 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class App {
 
     private static Scanner sc = new Scanner(System.in);
-    private static List<Aluno> listaAlunos = new ArrayList<Aluno>();
+    private static List<String> listaAlunos = new ArrayList();
 
     public static void main(String[] args) {
 
-        int i = 0;
-        String option;
+    String option;
 
         do {
 
@@ -42,15 +40,15 @@ public class App {
         System.out.println("Insira o nome: ");
         String nome = sc.nextLine();
         if(verificaNomeExistente(nome)){
-            listaAlunos.add(new Aluno(nome));
+            listaAlunos.add(nome);
         }else{
             System.out.println("\n#### NOME JA CADASTRADO ####\n");
         }
     }
 
     private static boolean verificaNomeExistente(String nome){
-        alunos.forEach(aluno ->{
-            if (aluno.getNome().equals(nome)){
+        listaAlunos.forEach(aluno ->{
+            if (aluno.equals(nome)){
                 return false;
             }
         });
@@ -58,9 +56,6 @@ public class App {
     }
 
     private static void exibirLista() {
-        System.out.println("----- Lista de nomes -----");
-        alunos.forEach(aluno ->{
-            System.out.println(aluno.getNome());
-        });
+        listaAlunos.forEach(System.out::println);
     }
 }
